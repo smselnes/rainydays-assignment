@@ -1,0 +1,249 @@
+/* Global Styling*/
+
+body {
+  font-family: "rockwell", Georgia, Times, serif;
+  margin: 0px;
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.active {
+  text-decoration: underline;
+}
+
+/* Header and Navigation styling*/
+a {
+  text-decoration: none;
+}
+header,
+footer {
+  background-color: #dcdbdb;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  max-height: 132px;
+}
+header img {
+  height: 8em;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+nav li {
+  display: inline;
+  padding: 0px;
+  max-width: 100%;
+}
+
+nav ul {
+  padding: 20px;
+}
+
+nav a,
+footer a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #0a3641;
+  padding: 30px;
+}
+#hamburger-menu {
+  display: none;
+}
+header label {
+  display: none;
+}
+.search {
+  margin-left: 30px;
+}
+#hamburger-menu {
+}
+
+/*Main Page*/
+
+.welcome {
+  background-image: url("../images/mainimage.jpg");
+  background-size: cover;
+  position: relative;
+  background-position-y: center;
+  background-position-x: right;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 80vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.welcome-text {
+  border: 3px solid #0a3641;
+  background-color: #8f8c78;
+  color: #dcdbdb;
+  font-size: 32px;
+  position: absolute;
+  border-radius: 42px;
+  width: 480px;
+  height: 175px;
+  margin: 20px 0px 0px 50px;
+}
+.welcome-link {
+  background-color: #a4b1bd;
+  border: 5px solid #0a3641;
+  font-size: 3em;
+  position: absolute;
+  top: 350px;
+
+  width: 480px;
+  border-radius: 42px;
+  margin-left: 50px;
+}
+
+/* Footer Related */
+
+footer {
+  text-align: center;
+}
+footer li {
+  list-style-type: none;
+  display: inline;
+  padding: 15px;
+  margin: 0px;
+}
+
+/*Media Queries*/
+
+@media (min-width: 300px) and (max-width: 600px) {
+  header .welcome {
+    align-items: left;
+    background-position-x: center;
+  }
+  .welcome-text {
+    width: 250px;
+    font-size: 1.5em;
+    height: 200px;
+    margin-left: 25px;
+  }
+  .welcome-link {
+    width: 250px;
+    font-size: 3.9em;
+    margin-left: 25px;
+    top: 275px;
+    height: 200px;
+  }
+  nav {
+    display: none;
+  }
+  nav li {
+    display: block;
+  }
+  header label {
+    display: block;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+  nav li {
+    font-size: 0.6em;
+  }
+
+  footer {
+    font-size: 0.6em;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 863px) {
+  .welcome {
+    align-items: left;
+    background-position-x: 10%;
+  }
+  .welcome-text {
+    width: 330px;
+    font-size: 1.8em;
+    height: 200px;
+    margin-left: 25px;
+  }
+  .welcome-link {
+    width: 330px;
+    font-size: 4.4em;
+    margin-left: 25px;
+    height: 200px;
+    top: 250px;
+  }
+
+  nav {
+    display: none;
+  }
+  nav li {
+    display: block;
+  }
+  header label {
+    display: block;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+
+  nav li,
+  footer {
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 864px) and (max-width: 1100px) {
+  .welcome {
+    align-items: left;
+    background-position-x: 10%;
+  }
+  .welcome-text {
+    width: 330px;
+    font-size: 1.8em;
+    height: 200px;
+    margin-left: 100px;
+  }
+  .welcome-link {
+    width: 330px;
+    font-size: 4.4em;
+    margin-left: 100px;
+    height: 200px;
+    top: 250px;
+  }
+  nav li,
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1101px) {
+  .welcome {
+    align-items: left;
+    background-position-x: 10%;
+  }
+  .welcome-text {
+    width: 400px;
+    font-size: 1.8em;
+    height: 200px;
+    margin-left: 140px;
+  }
+  .welcome-link {
+    width: 400px;
+    font-size: 4.4em;
+    margin-left: 140px;
+    height: 200px;
+    top: 275px;
+  }
+  nav li {
+    margin: 17px;
+  }
+}
+/* I need to practice more on using flex/grids in my styling.*/
+/* didn't manage to move the hamburger-menu to the right side. */
