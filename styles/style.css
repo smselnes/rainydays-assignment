@@ -1,10 +1,10 @@
 /*Variables*/
 :root {
-  --green: #7A765E;
-  --gray: #DCDBDB;
-  --darkgray: #A4B1BD;
-  --purple: #7363BF;
-  --dark: #0A3641;
+  --green: #7a765e;
+  --gray: #dcdbdb;
+  --darkgray: #a4b1bd;
+  --purple: #7363bf;
+  --dark: #0a3641;
 }
 
 /* Global Styling*/
@@ -124,6 +124,7 @@ header label {
 
 footer {
   text-align: center;
+  height: 70px;
 }
 footer li {
   list-style-type: none;
@@ -131,99 +132,147 @@ footer li {
   padding: 15px;
   margin: 0px;
 }
-footer ul {
-  margin: auto;
+
+/* INSPIRATION PAGE */
+.inspiration-main {
+  background-image: url(../images/textures1.jpg);
+  min-height: 80vh;
+  background-size: cover;
+  text-align: center;
+}
+.inspiration-main-text {
+  display: inline;
+  
+}
+.inspiration-main-image1 {
+  background-image: url(../images/inspiration1.jpg);
+  border: 3px solid var(--green);
+  border-radius: 0px 0px 0px 244px;
+  width: 322px;
+  height: 271px;
+}
+.inspiration-main-image2 {
+  background-image: url(../images/inspiration2.jpg);
+  background-size: cover;
+  border: 3px solid var(--green);
+  border-radius: 244px 0px 0px 0px;
+  width: 322px;
+  height: 271px;
+}
+.inspiration-main-image3 {
+  background-image: url(../images/inspiration3.jpg);
+  border: 3px solid var(--green);
+  border-radius: 0px 0px 244px 0px;
+  width: 322px;
+  height: 271px;
+}
+.inspiration-main-image4 {
+  background-image: url(../images/inspiration4.jpg);
+  border: 3px solid var(--green);
+  border-radius: 0px 244px 0px 0px;
+  width: 322px;
+  height: 271px;
 }
 
-/*Media Queries*/
-
-@media (min-width: 300px) and (max-width: 600px) {
-  header .welcome {
-    align-items: left;
-    background-position-x: center;
-  }
-  .welcome-text {
-    width: 250px;
-    font-size: 1.5em;
-    height: 200px;
-    margin-left: 25px;
-  }
-  .welcome-link {
-    width: 250px;
-    font-size: 3.9em;
-    margin-left: 25px;
-    top: 275px;
-    height: 200px;
-  }
-  nav {
-    display: none;
-  }
-  nav li {
-    display: block;
-  }
-  header label {
-    display: block;
-  }
-  #hamburger-menu {
-    display: none;
-  }
-
-  #hamburger-menu:checked ~ nav {
-    display: block;
-  }
-  nav li {
-    font-size: 0.6em;
-  }
-
-  footer {
-    font-size: 0.6em;
-    margin: 0px;
-  }
+.inspiration-main h1, h2{
+  display: 
 }
+  /* CONTACT PAGE */
+  .contact-main {
+    background-image: url(../images/textures1.jpg);
+    min-height: 80vh;
+    background-size: cover;
+    opacity: 0.7;
+  }
+  /*Media Queries*/
 
-@media (min-width: 601px) and (max-width: 863px) {
-  .welcome {
-    align-items: left;
-    background-position-x: 10%;
-  }
-  .welcome-text {
-    width: 330px;
-    font-size: 1.8em;
-    height: 200px;
-    margin-left: 25px;
-  }
-  .welcome-link {
-    width: 330px;
-    font-size: 4.4em;
-    margin-left: 25px;
-    height: 200px;
-    top: 250px;
+  @media (min-width: 300px) and (max-width: 600px) {
+    header .welcome {
+      align-items: left;
+      background-position-x: center;
+    }
+    .welcome-text {
+      width: 250px;
+      font-size: 1.5em;
+      height: 200px;
+      margin-left: 25px;
+    }
+    .welcome-link {
+      width: 250px;
+      font-size: 3.9em;
+      margin-left: 25px;
+      top: 275px;
+      height: 200px;
+    }
+    nav {
+      display: none;
+    }
+    nav li {
+      display: block;
+    }
+    header label {
+      display: block;
+    }
+    #hamburger-menu {
+      display: none;
+    }
+
+    #hamburger-menu:checked ~ nav {
+      display: block;
+    }
+    nav li {
+      font-size: 0.6em;
+    }
+
+    footer {
+      font-size: 0.6em;
+      margin: 0px;
+    }
   }
 
-  nav {
-    display: none;
-  }
-  nav li {
-    display: block;
-  }
-  header label {
-    display: block;
-  }
-  #hamburger-menu {
-    display: none;
+  @media (min-width: 601px) and (max-width: 863px) {
+    .welcome {
+      align-items: left;
+      background-position-x: 10%;
+    }
+    .welcome-text {
+      width: 330px;
+      font-size: 1.8em;
+      height: 200px;
+      margin-left: 25px;
+    }
+    .welcome-link {
+      width: 330px;
+      font-size: 4.4em;
+      margin-left: 25px;
+      height: 200px;
+      top: 250px;
+    }
+
+    nav {
+      display: none;
+    }
+    nav li {
+      display: block;
+    }
+    header label {
+      display: block;
+    }
+    #hamburger-menu {
+      display: none;
+    }
+
+    #hamburger-menu:checked ~ nav {
+      display: block;
+    }
+
+    nav li,
+    footer {
+      font-size: 0.7em;
+    }
   }
 
-  #hamburger-menu:checked ~ nav {
-    display: block;
-  }
-
-  nav li,
-  footer {
-    font-size: 0.7em;
-  }
-}
-
-/* @media (min-width: 864px) and (max-width: 1100px) {
+  /* @media (min-width: 864px) and (max-width: 1100px) {
   .welcome {
     align-items: left;
     background-position-x: 10%;
@@ -272,5 +321,3 @@ footer ul {
 /* I need to practice more on using flex/grids in my styling.*/
 /* didn't manage to move the hamburger-menu to the right side. */
 /*Husk å fjerne padding på li items ved bruk av hamburger-menu*/
-
-
