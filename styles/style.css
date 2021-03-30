@@ -134,22 +134,39 @@ footer li {
 }
 
 /* INSPIRATION PAGE */
-.inspiration-main {
-  background-image: url(../images/textures1.jpg);
-  min-height: 80vh;
-  background-size: cover;
-  text-align: center;
-}
 .inspiration-main-text {
-  display: inline;
-  
+  position: absolute;
+  text-align: center;
+  font-size: 2.1em;
+  width: 100%;
+  top: 300px;
+  color: black;
 }
+
+.inspiration-main-text h1 {
+  margin: 0px;
+}
+
+.inspiration-main {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 322px;
+  background-image: url(../images/textures1.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  grid-gap: 10px;
+}
+
 .inspiration-main-image1 {
   background-image: url(../images/inspiration1.jpg);
   border: 3px solid var(--green);
   border-radius: 0px 0px 0px 244px;
   width: 322px;
   height: 271px;
+  order: 2;
+  margin-top: 20px;
+  justify-self: center;
 }
 .inspiration-main-image2 {
   background-image: url(../images/inspiration2.jpg);
@@ -158,121 +175,128 @@ footer li {
   border-radius: 244px 0px 0px 0px;
   width: 322px;
   height: 271px;
+  order: 4;
+  justify-self: center;
 }
 .inspiration-main-image3 {
   background-image: url(../images/inspiration3.jpg);
   border: 3px solid var(--green);
+  background-size: cover;
   border-radius: 0px 0px 244px 0px;
   width: 322px;
   height: 271px;
+  order: 1;
+  margin-top: 20px;
+  justify-self: center;
 }
 .inspiration-main-image4 {
   background-image: url(../images/inspiration4.jpg);
   border: 3px solid var(--green);
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 0px 244px 0px 0px;
   width: 322px;
   height: 271px;
+  order: 3;
+  justify-self: center;
 }
 
-.inspiration-main h1, h2{
-  display: 
+/* CONTACT PAGE */
+.contact-main {
+  background-image: url(../images/textures1.jpg);
+  min-height: 80vh;
+  background-size: cover;
+  opacity: 0.7;
 }
-  /* CONTACT PAGE */
-  .contact-main {
-    background-image: url(../images/textures1.jpg);
-    min-height: 80vh;
-    background-size: cover;
-    opacity: 0.7;
+/*Media Queries*/
+
+@media (min-width: 300px) and (max-width: 600px) {
+  header .welcome {
+    align-items: left;
+    background-position-x: center;
   }
-  /*Media Queries*/
-
-  @media (min-width: 300px) and (max-width: 600px) {
-    header .welcome {
-      align-items: left;
-      background-position-x: center;
-    }
-    .welcome-text {
-      width: 250px;
-      font-size: 1.5em;
-      height: 200px;
-      margin-left: 25px;
-    }
-    .welcome-link {
-      width: 250px;
-      font-size: 3.9em;
-      margin-left: 25px;
-      top: 275px;
-      height: 200px;
-    }
-    nav {
-      display: none;
-    }
-    nav li {
-      display: block;
-    }
-    header label {
-      display: block;
-    }
-    #hamburger-menu {
-      display: none;
-    }
-
-    #hamburger-menu:checked ~ nav {
-      display: block;
-    }
-    nav li {
-      font-size: 0.6em;
-    }
-
-    footer {
-      font-size: 0.6em;
-      margin: 0px;
-    }
+  .welcome-text {
+    width: 250px;
+    font-size: 1.5em;
+    height: 200px;
+    margin-left: 25px;
+  }
+  .welcome-link {
+    width: 250px;
+    font-size: 3.9em;
+    margin-left: 25px;
+    top: 275px;
+    height: 200px;
+  }
+  nav {
+    display: none;
+  }
+  nav li {
+    display: block;
+  }
+  header label {
+    display: block;
+  }
+  #hamburger-menu {
+    display: none;
   }
 
-  @media (min-width: 601px) and (max-width: 863px) {
-    .welcome {
-      align-items: left;
-      background-position-x: 10%;
-    }
-    .welcome-text {
-      width: 330px;
-      font-size: 1.8em;
-      height: 200px;
-      margin-left: 25px;
-    }
-    .welcome-link {
-      width: 330px;
-      font-size: 4.4em;
-      margin-left: 25px;
-      height: 200px;
-      top: 250px;
-    }
-
-    nav {
-      display: none;
-    }
-    nav li {
-      display: block;
-    }
-    header label {
-      display: block;
-    }
-    #hamburger-menu {
-      display: none;
-    }
-
-    #hamburger-menu:checked ~ nav {
-      display: block;
-    }
-
-    nav li,
-    footer {
-      font-size: 0.7em;
-    }
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+  nav li {
+    font-size: 0.6em;
   }
 
-  /* @media (min-width: 864px) and (max-width: 1100px) {
+  footer {
+    font-size: 0.6em;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 863px) {
+  .welcome {
+    align-items: left;
+    background-position-x: 10%;
+  }
+  .welcome-text {
+    width: 330px;
+    font-size: 1.8em;
+    height: 200px;
+    margin-left: 25px;
+  }
+  .welcome-link {
+    width: 330px;
+    font-size: 4.4em;
+    margin-left: 25px;
+    height: 200px;
+    top: 250px;
+  }
+
+  nav {
+    display: none;
+  }
+  nav li {
+    display: block;
+  }
+  header label {
+    display: block;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+
+  nav li,
+  footer {
+    font-size: 0.7em;
+  }
+}
+
+/* @media (min-width: 864px) and (max-width: 1100px) {
   .welcome {
     align-items: left;
     background-position-x: 10%;
@@ -294,7 +318,7 @@ footer li {
   footer {
     font-size: 0.8em;
   } */
-}
+/* } */
 
 /* @media (min-width: 1101px) {
   .welcome {
@@ -318,6 +342,9 @@ footer li {
     margin: 17px;
   }
 } */
-/* I need to practice more on using flex/grids in my styling.*/
+
 /* didn't manage to move the hamburger-menu to the right side. */
 /*Husk å fjerne padding på li items ved bruk av hamburger-menu*/
+/* Lage transition på search-elementet.  */
+/* Legge inn adjektiver i inspiration-siden. (Durability / Versatility).*/
+/* Jackets page - Hover over opacity?*/
