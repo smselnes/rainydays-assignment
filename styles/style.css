@@ -11,16 +11,22 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Rockwell", serif;
+  src: url("https://use.typekit.net/dsy4yxt.css") format(truetype);
+}
 
 body {
-  font-family: "rockwell", Georgia, Times, serif;
+  font-family: "Rockwell";
   margin: 0px;
   max-width: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  height: auto;
 }
 .active {
   text-decoration: underline;
+  color: var(--dark);
 }
 
 /* Header and Navigation styling*/
@@ -30,22 +36,33 @@ a {
 header,
 footer {
   background-color: var(--green);
+  position: fixed;
+  box-shadow: 0 0 12px 0 black;
+  z-index: 1;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
-  max-height: 132px;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  box-shadow: 0 0 12px 0 black;
+  z-index: 1;
 }
 header img {
-  height: 8em;
+  height: 120px;
   margin-left: 15px;
-  margin-right: 10px;
 }
 nav {
-  display: contents;
+  display: none;
+  position: fixed;
+  top: 121px;
+  background-color: var(--green);
+  z-index: 1000;
+  right: 0px;
 }
 nav li {
   display: inline;
@@ -53,78 +70,89 @@ nav li {
   max-width: 100%;
   margin: 10px;
 }
-nav ul {
-  width: auto;
-}
 nav a,
 footer a {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: var(--gray);
   padding: 10px;
+  font-weight: bold;
 }
 /* Hamburger Menu Checkbox*/
 #hamburger-menu {
   display: none;
 }
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
 header label {
   display: none;
   margin-right: 15px;
   font-size: 1.8em;
+  color: var(--gray);
 }
 /* Search Feature*/
-.search {
-  margin-left: 25px;
+
+.search:hover {
+  color: var(--purple);
 }
 
 /*Main Page*/
-
+main {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
 .welcome {
   background-image: url("../images/mainimage.jpg");
   background-size: cover;
+  height: 100vh;
+  margin-top: 123px;
   position: relative;
-  background-position-y: center;
-  background-position-x: right;
+  background-position-x: center;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 80vh;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .welcome-text {
-  border: 1px solid #0a3641;
+  border: 2px solid var(--dark);
   background-color: var(--gray);
+  border-radius: 42px;
   color: var(--dark);
-  font-size: 32px;
+  font-size: 1.5em;
   position: absolute;
-  width: 480px;
+  width: 250px;
   height: 175px;
-  margin: 20px 0px 0px 50px;
+  margin: 20px 0px 0px 10px;
+  text-align: center;
 }
 
-.welcome-text p {
-  margin: 0px;
-}
 .welcome-link {
-  background-color: var(--gray);
+  background-color: var(--green);
   border: 2px solid var(--dark);
-  font-size: 3em;
+  font-size: 2.5em;
   position: absolute;
-  top: 230px;
-  width: 480px;
+  top: 250px;
+  width: 250px;
+  height: 110px;
   border-radius: 42px;
-  margin-left: 50px;
+  margin-left: 10px;
+  box-shadow: 0 0 10px 0 black;
 }
+
 .welcome-link a {
-  color: var(--dark);
+  color: var(--gray);
+  padding: 5px;
+  text-transform: uppercase;
 }
 
 /* Footer Related */
 
 footer {
   text-align: center;
-  height: 70px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 footer li {
   list-style-type: none;
@@ -139,7 +167,7 @@ footer li {
   text-align: center;
   font-size: 2.1em;
   width: 100%;
-  top: 300px;
+  top: 270px;
   color: black;
 }
 
@@ -151,11 +179,12 @@ footer li {
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 322px;
-  background-image: url(../images/textures1.jpg);
-  min-height: 100vh;
+  background-image: url(../images/textures2.jpg);
+  min-height: 125vh;
   width: 100%;
   background-size: cover;
   grid-gap: 10px;
+  margin-top: 123px;
 }
 
 .inspiration-main-image1 {
@@ -200,151 +229,173 @@ footer li {
   order: 3;
   justify-self: center;
 }
+/* JACKETS PAGE */
+.jackets-main {
+  background-color: var(--darkgray);
+  margin-top: 123px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+}
+.jackets-main div img {
+  margin: 10px;
+  box-shadow: 0 0px 10px 0 black;
+  border-radius: 35%;
+}
 
+.jackets-main h1,
+h2 {
+  border: 1px solid black;
+  margin: 0px;
+}
+
+/* PRODUCTS PAGE */ /* All styling on the different specific jacket pages. */
+.jackets-content {
+  background-image: url(../images/jackets-textures.jpg);
+  background-size: cover;
+  margin-top: 123px;
+  /* display: flex; */
+}
+.jackets-content-blue {
+  justify-content: center;
+  /* flex: 1 250px; */
+  border: 1px solid black;
+}
+.jackets-content-blue:nth-of-type(3) {
+  /* display: flex; */
+  /* flex-flow: column; */
+}
+
+.jackets-content-blue img {
+  border-radius: 35%;
+  border: 2px solid var(--dark);
+  box-shadow: 0 0 10px 0 black;
+}
 /* CONTACT PAGE */
 .contact-main {
-  background-image: url(../images/textures1.jpg);
-  min-height: 80vh;
+  background-image: url(../images/textures2.jpg);
+  min-height: 100vh;
   background-size: cover;
-  opacity: 0.7;
+  margin-top: 123px;
+}
+
+.contact-form {
+  display: table;
+}
+.contact-form-input {
+  display: table-row;
+}
+
+.contact-form input {
+  background-color: var(--gray);
+  border-radius: 42px;
+  width: 380px;
+}
+
+/* CHECKOUT PAGE*/
+.checkout-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin: 5px;
+  margin-top: 123px;
+}
+
+.checkout-image {
+  background-image: url(/images/checkout-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  height: 100vh;
+}
+.checkout-summary {
+  border: 1px solid black;
+  margin: 5px;
+}
+.checkout-payment {
+  border: 1px solid black;
+  margin: 5px;
+}
+.checkout-payment input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+.purchase {
+  border-radius: 42px;
+  background-color: var(--green);
+  color: var(--gray);
 }
 /*Media Queries*/
 
-@media (min-width: 300px) and (max-width: 600px) {
+@media (min-width: 300px) {
   header .welcome {
-    align-items: left;
-    background-position-x: center;
+    justify-items: start;
   }
-  .welcome-text {
-    width: 250px;
-    font-size: 1.5em;
-    height: 200px;
-    margin-left: 25px;
-  }
-  .welcome-link {
-    width: 250px;
-    font-size: 3.9em;
-    margin-left: 25px;
-    top: 275px;
-    height: 200px;
-  }
-  nav {
-    display: none;
-  }
+
   nav li {
+    text-align: left;
     display: block;
+    padding: 15px 10px;
   }
+
   header label {
     display: block;
   }
+
   #hamburger-menu {
     display: none;
   }
-
-  #hamburger-menu:checked ~ nav {
-    display: block;
+  nav ul {
+    padding: 0px;
+    margin: 0px;
   }
+
+  footer,
   nav li {
-    font-size: 0.6em;
-  }
-
-  footer {
     font-size: 0.6em;
     margin: 0px;
   }
 }
 
-@media (min-width: 601px) and (max-width: 863px) {
-  .welcome {
-    align-items: left;
-    background-position-x: 10%;
-  }
+@media (min-width: 601px) {
   .welcome-text {
-    width: 330px;
-    font-size: 1.8em;
+    width: 400px;
+    font-size: 1.9em;
     height: 200px;
-    margin-left: 25px;
+    margin: 15px 35px;
   }
   .welcome-link {
-    width: 330px;
-    font-size: 4.4em;
-    margin-left: 25px;
-    height: 200px;
-    top: 250px;
-  }
-
-  nav {
-    display: none;
-  }
-  nav li {
-    display: block;
-  }
-  header label {
-    display: block;
-  }
-  #hamburger-menu {
-    display: none;
-  }
-
-  #hamburger-menu:checked ~ nav {
-    display: block;
-  }
-
-  nav li,
-  footer {
-    font-size: 0.7em;
+    width: 400px;
+    margin: 0px 35px;
+    font-size: 2.8em;
   }
 }
 
-/* @media (min-width: 864px) and (max-width: 1100px) {
-  .welcome {
-    align-items: left;
-    background-position-x: 10%;
+@media (min-width: 800px) {
+  header label {
+    display: none;
   }
-  .welcome-text {
-    width: 330px;
-    font-size: 1.8em;
-    height: 200px;
-    margin-left: 100px;
+  nav {
+    position: static;
+    display: block;
+    width: 100%;
   }
-  .welcome-link {
-    width: 330px;
-    font-size: 4.4em;
-    margin-left: 100px;
-    height: 200px;
-    top: 250px;
-  }
-  nav li,
-  footer {
-    font-size: 0.8em;
-  } */
-/* } */
-
-/* @media (min-width: 1101px) {
-  .welcome {
-    align-items: left;
-    background-position-x: 10%;
-  }
-  .welcome-text {
-    width: 400px;
-    font-size: 1.8em;
-    height: 200px;
-    margin-left: 140px;
-  }
-  .welcome-link {
-    width: 400px;
-    font-size: 4.4em;
-    margin-left: 140px;
-    height: 200px;
-    top: 275px;
-  }
+  footer,
   nav li {
-    margin: 17px;
+    display: inline;
+    font-size: 1em;
   }
-} */
+}
+@media (min-width: 1020px) {
+  header {
+  }
+}
 
-/* didn't manage to move the hamburger-menu to the right side. */
-/*Husk å fjerne padding på li items ved bruk av hamburger-menu*/
-/* Lage transition på search-elementet.  */
+/* Search Icon - More Action? */
+
 /* Legge inn adjektiver i inspiration-siden. (Durability / Versatility).*/
 /* Jackets page - Hover over opacity?*/
+
+/* Consider change of background color on header and footer due to accessibility*/
+/* Sign in?*/
+/* Figure out the fontface issue*/
+/* Checkout page */
