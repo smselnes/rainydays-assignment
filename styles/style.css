@@ -92,10 +92,6 @@ header label {
 }
 /* Search Feature*/
 
-.search:hover {
-  color: var(--purple);
-}
-
 /*Main Page*/
 main {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
@@ -163,45 +159,38 @@ footer li {
 
 /* INSPIRATION PAGE */
 .inspiration-main-text {
+  text-transform: capitalize;
+  color: var(--gray);
   position: absolute;
   text-align: center;
-  font-size: 2.1em;
   width: 100%;
-  top: 270px;
-  color: black;
-}
-
-.inspiration-main-text h1 {
+  top: 123px;
+  font-size: 0.6em;
   margin: 0px;
 }
 
 .inspiration-main {
   display: inline-grid;
-  grid-template-columns: 1fr 1fr;
+  background-color: var(--dark);
+  grid-template-columns: 1fr;
   grid-template-rows: 322px;
-  background-image: url(../images/textures2.jpg);
-  min-height: 125vh;
   width: 100%;
-  background-size: cover;
   grid-gap: 10px;
-  margin-top: 123px;
+  padding: 123px 0px;
 }
 
 .inspiration-main-image1 {
   background-image: url(../images/inspiration1.jpg);
-  border: 3px solid var(--green);
-  border-radius: 0px 0px 0px 244px;
+  border: 1px solid var(--green);
   width: 322px;
   height: 271px;
   order: 2;
-  margin-top: 20px;
   justify-self: center;
 }
 .inspiration-main-image2 {
   background-image: url(../images/inspiration2.jpg);
   background-size: cover;
-  border: 3px solid var(--green);
-  border-radius: 244px 0px 0px 0px;
+  border: 1px solid var(--green);
   width: 322px;
   height: 271px;
   order: 4;
@@ -209,21 +198,19 @@ footer li {
 }
 .inspiration-main-image3 {
   background-image: url(../images/inspiration3.jpg);
-  border: 3px solid var(--green);
+  border: 1px solid var(--green);
   background-size: cover;
-  border-radius: 0px 0px 244px 0px;
   width: 322px;
   height: 271px;
+  margin-top: 52px;
   order: 1;
-  margin-top: 20px;
   justify-self: center;
 }
 .inspiration-main-image4 {
   background-image: url(../images/inspiration4.jpg);
-  border: 3px solid var(--green);
+  border: 1px solid var(--green);
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0px 244px 0px 0px;
   width: 322px;
   height: 271px;
   order: 3;
@@ -231,24 +218,61 @@ footer li {
 }
 /* JACKETS PAGE */
 .jackets-main {
-  background-color: var(--darkgray);
-  margin-top: 123px;
+  background-color: var(--dark);
+  padding: 150px 0px;
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-evenly;
+  grid-gap: 30px;
+  grid-template-columns: auto;
+  text-align: center;
+  color: var(--gray);
+
+  width: 100%;
 }
-.jackets-main div img {
-  margin: 10px;
-  box-shadow: 0 0px 10px 0 black;
-  border-radius: 35%;
+.jackets-main h1 {
+  box-shadow: 0 0 3px 0 var(--gray);
+  background-color: var(--gray);
+  color: var(--dark);
+  width: max-content;
+  justify-self: center;
+}
+.jackets-main h2 {
+  color: var(--dark);
+  background-color: var(--gray);
+  max-width: max-content;
+  font-size: 16px;
+  position: absolute;
+  bottom: -30px;
+  right: 47px;
+}
+.jackets-main p {
+  color: var(--dark);
+  background-color: var(--gray);
+  max-width: max-content;
+  position: absolute;
+  border-radius: 42px;
+  border: 1px solid var(--green);
+  padding: 5px;
+}
+.jackets-main div {
+  background-repeat: no-repeat;
+  width: 322px;
+  height: 271px;
+  justify-self: center;
+  position: relative;
 }
 
-.jackets-main h1,
-h2 {
-  border: 1px solid black;
-  margin: 0px;
+.jackets-main-blue {
+  background-image: url(../images/jacket-blue.jpeg);
 }
-
+.jackets-main-green {
+  background-image: url(../images/jacket-green.jpeg);
+}
+.jackets-main-red {
+  background-image: url(../images/jacket-red.jpeg);
+}
+.jackets-main-black {
+  background-image: url(../images/jacket-black.jpeg);
+}
 /* PRODUCTS PAGE */ /* All styling on the different specific jacket pages. */
 .jackets-content {
   background-image: url(../images/jackets-textures.jpg);
@@ -260,10 +284,6 @@ h2 {
   justify-content: center;
   /* flex: 1 250px; */
   border: 1px solid black;
-}
-.jackets-content-blue:nth-of-type(3) {
-  /* display: flex; */
-  /* flex-flow: column; */
 }
 
 .jackets-content-blue img {
@@ -324,7 +344,7 @@ h2 {
   background-color: var(--green);
   color: var(--gray);
 }
-/*Media Queries*/
+/*============================Media Queries=======================================*/
 
 @media (min-width: 300px) {
   header .welcome {
@@ -368,6 +388,30 @@ h2 {
     margin: 0px 35px;
     font-size: 2.8em;
   }
+  .jackets-main {
+    grid-template-columns: auto auto;
+    padding-left: 30px;
+  }
+  .jackets-main h1 {
+    display: none;
+  }
+  .jackets-main h2 {
+    font-size: 20px;
+    bottom: -40px;
+  }
+}
+@media (min-width: 695px) {
+  .inspiration-main-text {
+    font-size: 1em;
+    top: 110px;
+    justify-self: center;
+  }
+  .inspiration-main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .inspiration-main-image1 {
+    margin-top: 52px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -385,8 +429,34 @@ h2 {
     font-size: 1em;
   }
 }
-@media (min-width: 1020px) {
-  header {
+@media (min-width: 950px) {
+  .inspiration-main-text {
+    font-size: 1.9em;
+    top: 278px;
+    width: 300px;
+    left: 330px;
+  }
+  .inspiration-main-image1 {
+    border-radius: 0px 0px 0px 244px;
+    border: 3px solid var(--green);
+  }
+  .inspiration-main-image2 {
+    border: 3px solid var(--green);
+    border-radius: 244px 0px 0px 0px;
+  }
+  .inspiration-main-image3 {
+    border-radius: 0px 0px 244px 0px;
+    border: 3px solid var(--green);
+  }
+  .inspiration-main-image4 {
+    border-radius: 0px 244px 0px 0px;
+    border: 3px solid var(--green);
+  }
+}
+@media (min-width: 1350px) {
+  .jackets-main {
+    grid-template-columns: repeat(4, 1fr);
+    height: 120vh;
   }
 }
 
@@ -399,3 +469,23 @@ h2 {
 /* Sign in?*/
 /* Figure out the fontface issue*/
 /* Checkout page */
+
+/* JACKETS PAGE */
+/* .jackets-main {
+  background-color: var(--darkgray);
+  margin-top: 123px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+}
+.jackets-main div img {
+  margin: 10px;
+  box-shadow: 0 0px 10px 0 black;
+  border-radius: 35%;
+}
+
+.jackets-main h1,
+h2 {
+  border: 1px solid black;
+  margin: 0px;
+} */
