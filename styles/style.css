@@ -238,11 +238,11 @@ footer li {
   width: 100%;
 }
 .jackets-main h1 {
-  box-shadow: 0 0 3px 0 var(--gray);
   background-color: var(--gray);
   color: var(--dark);
   width: max-content;
   justify-self: center;
+  padding: 5px;
 }
 .jackets-main h2 {
   color: var(--dark);
@@ -250,8 +250,15 @@ footer li {
   max-width: max-content;
   font-size: 16px;
   position: absolute;
-  bottom: -30px;
-  right: 47px;
+  bottom: -34px;
+  right: 24px;
+  text-transform: uppercase;
+}
+.jackets-main h3 {
+  color: var(--gray);
+  position: absolute;
+  top: -55px;
+  left: 117px;
 }
 .jackets-main p {
   color: var(--dark);
@@ -261,41 +268,31 @@ footer li {
   border-radius: 42px;
   border: 1px solid var(--green);
   padding: 5px;
+  top: 0px;
+  left: -10px;
 }
 .jackets-main div {
-  background-repeat: no-repeat;
   width: 322px;
   height: 271px;
   justify-self: center;
   position: relative;
+  margin-bottom: 45px;
 }
 
-.jackets-main-blue {
-  background-image: url(../images/jacket-blue.jpeg);
-}
-.jackets-main-green {
-  background-image: url(../images/jacket-green.jpeg);
-}
-.jackets-main-red {
-  background-image: url(../images/jacket-red.jpeg);
-}
-.jackets-main-black {
-  background-image: url(../images/jacket-black.jpeg);
-}
 /* PRODUCTS PAGE */ /* All styling on the different specific jacket pages. */
 .jackets-content {
-  background-image: url(../images/jackets-textures.jpg);
+  background-image: url(../images/jackets-textures2.jpg);
   background-size: cover;
   margin-top: 123px;
   text-align: center;
   height: 125vh;
 }
 .jackets-content h2 {
-  color: var(--gray);
-  background-color: var(--purple);
-  border: 1px solid black;
+  color: var(--dark);
+  background-color: var(--darkgray);
   max-width: 100%;
   margin: 0px 20px;
+  font-size: 1.2em;
 }
 .jackets-buttons a {
   border: 3px solid var(--dark);
@@ -319,24 +316,61 @@ footer li {
 }
 /* CONTACT PAGE */
 .contact-main {
-  background-image: url(../images/textures3.jpg);
-  min-height: 100vh;
+  grid-template-columns: 1fr;
+  text-align: center;
+  background-image: url(../images/textures-small.jpg);
+  min-height: 125vh;
   background-size: cover;
   margin-top: 123px;
 }
+.contact-main h1,
+h2 {
+  background-color: var(--darkgray);
+  display: inline-block;
+  padding: 10px;
+  width: 80%;
+}
+
+.contact-main h2 {
+  margin-top: 60px;
+}
 
 .contact-form {
-  display: table;
+  display: inline-grid;
+  position: relative;
+  justify-content: center;
 }
-.contact-form-input {
-  display: table-row;
+
+.contact-form label {
+  position: inherit;
+  font-weight: bold;
 }
 
 .contact-form input {
   background-color: var(--gray);
   border-radius: 42px;
-  width: 380px;
+  width: 260px;
+  margin: 15px;
+  padding: 5px;
 }
+.enquiry {
+  margin-top: 15px;
+}
+.enquiry textarea {
+  box-shadow: 2px 2px 5px 0 var(--dark);
+  position: relative;
+}
+.enquiry button {
+  display: flex;
+  background-color: var(--green);
+  color: var(--gray);
+  border-radius: 42px;
+  border: 3px solid var(--dark);
+  width: 115px;
+  height: 35px;
+  margin: auto;
+}
+
 /* ABOUT PAGE */
 .about-section {
   margin-top: 123px;
@@ -522,13 +556,14 @@ h2 {
   .jackets-main {
     grid-template-columns: auto auto;
     padding-left: 30px;
+    margin-top: 70px;
   }
   .jackets-main h1 {
     display: none;
   }
   .jackets-main h2 {
     font-size: 20px;
-    bottom: -40px;
+    bottom: -37px;
   }
   .about-section {
     font-size: 1.2em;
@@ -580,6 +615,30 @@ h2 {
   .jackets-content {
     grid-template-columns: 1fr 1fr;
   }
+  .jackets-content-blue {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .jackets-content-blue h2 {
+    font-size: 1.4em;
+  }
+  .jackets-buttons {
+    margin-top: 30px;
+  }
+  .size-buttons,
+  .jackets-content-blue img {
+    margin-left: 25%;
+  }
+
+  .enquiry textarea {
+    width: 50%;
+  }
+  .enquiry button {
+    margin-top: 10px;
+    width: 150px;
+    height: 45px;
+  }
 }
 @media (min-width: 950px) {
   .inspiration-main-text {
@@ -613,6 +672,9 @@ h2 {
   .employees {
     grid-template-columns: repeat(4, 1fr);
     height: 500px;
+  }
+  .contact-form {
+    display: grid;
   }
 }
 
