@@ -18,7 +18,8 @@
             src="/images/rainydays_logo.png"
             alt="Brand logo. Illustration of a mountain."
         /></a>
-  
+        <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
         <nav>
           <ul>
             <li>
@@ -30,32 +31,46 @@
             <li>
               <a href="inspiration.html">Inspiration</a>
             </li>
-  
             <li>
-              <a href="checkout.html"><i class="fas fa-shopping-basket"></i></a>
+              <a class="active" href="checkout.html"><i class="fas fa-shopping-basket"></i></a>
             </li>
             <li><a href=i class="fas fa-search"></i></a></li>
           </ul>
-          
         </nav>
       </header>
     </body>
     <main class="checkout-main">
-      <section class="checkout-image">
-      </section>
       <section class="checkout-summary">
         <h1>Your Products</h1>
-      <h2>Subtotal</h2>
+        <div>
+          <input type="text" name="productline1" id="productline1" placeholder="Product-item">
+          <input type="number" placeholder="NOK="></div>
+        </div>
+        <div>
+          <input type="text" name="productline2" id="productline2"  placeholder="Product-item">
+          <input type="number" placeholder="NOK="></div>
+        <div>
+          <input type="text" name="productline3" id="productline3"  placeholder="Product-item">
+          <input type="number" placeholder="NOK=">
+        </div>
+        <div>
+          <input type="text" name="productline4" id="productline4" placeholder="Product-item">
+          <input type="number" placeholder="NOK=">
+        </div>
+        <h2>Subtotal</h2>
+      <input type="number" placeholder="Total NOK=">
       </section>
       <section class="checkout-payment">
+        <h3>Payment</h3>
         <div><label for="cardholder">Cardholders Name</label>
         <input type="number" id="cardholder"></div>
         <div><label for="cardnumber">Card Number</label>
       <input type="number" id="cardnumber"></div>
-      
-      <p>Expiry date</p>
-      <p>CVV</p>
-      <button class="purchase"><a href="success.html">Order Now</a></button>
+      <div class="expiry"><label for="expirydate">Expiry date</label>
+        <input type="number" id="expirydate">
+        <label for="cvv">CVV</label>
+          <input type="number" id="cvv"></div>
+          <a class="purchase" href="success.html">Order Now</a>
       </section>
       
     </main>
