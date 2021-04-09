@@ -76,13 +76,6 @@ footer a {
   padding: 10px;
   font-weight: bold;
 }
-.search {
-  color: var(--gray);
-}
-.search:hover {
-  color: var(--dark);
-  font-size: 1.8em;
-}
 
 /* Hamburger Menu Checkbox*/
 #hamburger-menu {
@@ -98,7 +91,14 @@ header label {
   color: var(--gray);
 }
 /* Search Feature*/
-
+.search {
+  color: var(--gray);
+}
+.search:hover {
+  color: var(--dark);
+  font-size: 1.8em;
+  background-color: var--(--gray);
+}
 /*Main Page*/
 main {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
@@ -132,13 +132,13 @@ main {
 .welcome-link {
   background-color: var(--green);
   border: 2px solid var(--dark);
-  font-size: 2.5em;
+  font-size: 2.2em;
   position: absolute;
+  padding: 10px;
   top: 250px;
-  width: 250px;
-  height: 110px;
+  width: fit-content;
+  height: max-content;
   border-radius: 42px;
-  margin-left: 10px;
   box-shadow: 0 0 10px 0 black;
 }
 
@@ -281,7 +281,7 @@ footer li {
 
 /* PRODUCTS PAGE */ /* All styling on the different specific jacket pages. */
 .jackets-content {
-  background-image: url(../images/jackets-textures2.jpg);
+  background-image: url(../images/jackets-textures.jpg);
   background-size: cover;
   margin-top: 123px;
   text-align: center;
@@ -301,17 +301,21 @@ footer li {
   color: var(--gray);
   background-color: var(--green);
 }
-.jackets-content-blue {
+.jackets-content-blue,
+.jackets-content-red,
+.jackets-content-green,
+.jackets-content-black {
   grid-template-columns: 1fr;
   padding: 30px 0px;
   position: relative;
 }
+
 .size-buttons {
   margin: 30px;
   font-size: 1.5em;
 }
 
-.jackets-content-blue img {
+.jackets-content img {
   box-shadow: 0 0 15px 0 black;
 }
 /* CONTACT PAGE */
@@ -380,7 +384,13 @@ h2 {
   justify-items: center;
   text-align: center;
   height: 200vh;
-  font-size: 0.8em;
+}
+.about-section h2 {
+  margin: 0px 20px;
+  background-color: var(--dark);
+  font-size: 0.9em;
+  font-weight: normal;
+  width: 300px;
 }
 
 .employees {
@@ -428,7 +438,14 @@ h2 {
   border-radius: 50%;
   margin: 15px;
 }
-
+.location-map {
+  background-image: url(../images/about-map.png);
+  background-size: cover;
+  color: var(--dark);
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
 /* CHECKOUT PAGE*/
 .checkout-main {
   display: grid;
@@ -512,14 +529,19 @@ h2 {
 /*============================Media Queries=======================================*/
 
 @media (min-width: 300px) {
-  header .welcome {
-    justify-items: start;
+  header,
+  .welcome {
+    justify-items: center;
+  }
+  .welcome {
+    background-position-x: 80%;
   }
 
   nav li {
-    text-align: left;
+    text-align: center;
     display: block;
-    padding: 15px 10px;
+    padding: 20px 10px;
+    margin: 5px;
   }
 
   header label {
@@ -599,6 +621,9 @@ h2 {
 }
 
 @media (min-width: 800px) {
+  .welcome {
+    justify-items: start;
+  }
   header label {
     display: none;
   }
@@ -612,25 +637,36 @@ h2 {
     display: inline;
     font-size: 1em;
   }
-  .jackets-content {
-    grid-template-columns: 1fr 1fr;
-  }
-  .jackets-content-blue {
+
+  .jackets-content-blue,
+  .jackets-content-red,
+  .jackets-content-green,
+  .jackets-content-black {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
-  .jackets-content-blue h2 {
+  .jackets-content-blue,
+  .jackets-content-red,
+  .jackets-content-green,
+  .jackets-content-black h2 {
     font-size: 1.4em;
   }
   .jackets-buttons {
     margin-top: 30px;
   }
-  .size-buttons,
-  .jackets-content-blue img {
+  .size-buttons {
     margin-left: 25%;
   }
-
+  .jackets-content-blue img,
+  .jackets-content-red img,
+  .jackets-content-green img,
+  .jackets-content-black img {
+    margin-left: 25%;
+  }
+  .contact-main {
+    background-position: center;
+  }
   .enquiry textarea {
     width: 50%;
   }
@@ -638,6 +674,10 @@ h2 {
     margin-top: 10px;
     width: 150px;
     height: 45px;
+  }
+  .about-text {
+    display: flex;
+    justify-content: center;
   }
 }
 @media (min-width: 950px) {
