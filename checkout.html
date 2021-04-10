@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <script
       src="https://kit.fontawesome.com/982175d43a.js"
       crossorigin="anonymous"
     ></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="See through your order before submitting purchase."
+    />
     <title>Rainydays | Checkout Page</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="https://use.typekit.net/dsy4yxt.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
     <header>
-        <a href="index.html"
-          ><img
-            src="/images/rainydays_logo.png"
-            alt="Brand logo. Illustration of a mountain."
-        /></a>
-        <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <a href="index.html"
+        ><img
+          src="/images/rainydays_logo.png"
+          alt="Brand logo. Illustration of a mountain."
+      /></a>
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Home </a>
-            </li>
-            <li>
-              <a href="jackets.html">Jackets </a>
-            </li>
-            <li>
-              <a href="inspiration.html">Inspiration</a>
-            </li>
-            <li>
-              <a class="active" href="checkout.html"><i class="fas fa-shopping-basket"></i></a>
-            </li>
-            <li class="search"><i class= "fas fa-search"></i></a></li>
-          </ul>
-        </nav>
-      </header>
-    </body>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home </a>
+          </li>
+          <li>
+            <a href="jackets.html">Jackets </a>
+          </li>
+          <li>
+            <a href="inspiration.html">Inspiration</a>
+          </li>
+          <li>
+            <a class="active" href="checkout.html"
+              ><i class="fas fa-shopping-basket"></i
+            ></a>
+          </li>
+          <li class="search"><i class="fas fa-search"></i></li>
+        </ul>
+      </nav>
+    </header>
     <main class="checkout-main">
       <section class="checkout-summary">
         <h1>Your Products</h1>
         <div>
-          <input type="text" name="productline1" id="productline1" placeholder="Product-item">
-          <input type="number" placeholder="NOK="></div>
+          <input
+            type="text"
+            name="productline1"
+            id="productline1"
+            placeholder="Product-item"
+          />
+          <input type="number" placeholder="NOK=" />
         </div>
         <div>
-          <input type="text" name="productline2" id="productline2"  placeholder="Product-item">
-          <input type="number" placeholder="NOK="></div>
-        <div>
-          <input type="text" name="productline3" id="productline3"  placeholder="Product-item">
-          <input type="number" placeholder="NOK=">
+          <input
+            type="text"
+            name="productline2"
+            id="productline2"
+            placeholder="Product-item"
+          />
+          <input type="number" placeholder="NOK=" />
         </div>
         <div>
-          <input type="text" name="productline4" id="productline4" placeholder="Product-item">
-          <input type="number" placeholder="NOK=">
+          <input
+            type="text"
+            name="productline3"
+            id="productline3"
+            placeholder="Product-item"
+          />
+          <input type="number" placeholder="NOK=" />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="productline4"
+            id="productline4"
+            placeholder="Product-item"
+          />
+          <input type="number" placeholder="NOK=" />
         </div>
         <h2>Subtotal</h2>
-      <input type="number" placeholder="Total NOK=">
+        <input type="number" placeholder="Total NOK=" />
       </section>
       <section class="checkout-payment">
         <h3>Payment</h3>
-        <div><label for="cardholder">Cardholders Name</label>
-        <input type="number" id="cardholder"></div>
-        <div><label for="cardnumber">Card Number</label>
-      <input type="number" id="cardnumber"></div>
-      <div class="expiry"><label for="expirydate">Expiry date</label>
-        <input type="number" id="expirydate">
-        <label for="cvv">CVV</label>
-          <input type="number" id="cvv"></div>
-          <a class="purchase" href="success.html">Order Now</a>
+        <div>
+          <label for="cardholder">Cardholders Name</label>
+          <input type="number" id="cardholder" />
+        </div>
+        <div>
+          <label for="cardnumber">Card Number</label>
+          <input type="number" id="cardnumber" />
+        </div>
+        <div class="expiry">
+          <label for="expirydate">Expiry date</label>
+          <input type="number" id="expirydate" />
+          <label for="cvv">CVV</label>
+          <input type="number" id="cvv" />
+        </div>
+        <a class="purchase" href="success.html">Order Now</a>
       </section>
-      
     </main>
     <footer>
       <ul>
@@ -84,5 +116,5 @@
         </li>
       </ul>
     </footer>
-</body>
+  </body>
 </html>

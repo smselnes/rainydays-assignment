@@ -12,8 +12,9 @@
       name="description"
       content="Contact us about our quality outdoor jackets."
     />
-    <title>Rainydays | Contact Page</title>
+    <title>Rainydays | Contact</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/dsy4yxt.css" />
   </head>
   <body>
     <header>
@@ -21,7 +22,8 @@
         ><img
           src="/images/rainydays_logo.png"
           alt="Brand logo. Illustration of a mountain."
-      /></a>
+        />
+      </a>
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
       <nav>
@@ -38,26 +40,23 @@
           <li>
             <a href="checkout.html"><i class="fas fa-shopping-basket"></i></a>
           </li>
-          <li class="search"><i class= "fas fa-search"></i></a></li>
+          <li class="search"><i class="fas fa-search"></i></li>
         </ul>
       </nav>
     </header>
     <main class="contact-main">
       <h1>Questions? Send us a message.</h1>
-      
-      <form class="contact-form" action="" method="get">
-          <label for="name">Your name</label>
-          <input type="text" name="name" id="name" required>
-          <label for="email">Your e-mail</label>
-          <input type="email" name="email" id="email" required>
-          <label for="telephone">Your mobile number</label>
-          <input type="tel" name="telephone" id="telephone">
-      </form>
-      <div class="enquiry">
+      <form class="contact-form" action="post" method="GET">
+        <label for="name">Your name</label>
+        <input type="text" name="name" id="name" required />
+        <label for="email">Your e-mail</label>
+        <input type="email" name="email" id="email" required />
+        <label for="telephone">Your mobile number</label>
+        <input type="tel" name="telephone" id="telephone" />
         <textarea name="enquiry" id="message" cols="30" rows="10"></textarea>
-        <button>Submit</button>
-      </div>
-    <h2>We will answer your enquiry as soon as possible.</h2>
+        <input type="submit" name="submit" id="submit" />
+      </form>
+      <h2>We will answer your enquiry as soon as possible.</h2>
     </main>
     <footer>
       <ul>
